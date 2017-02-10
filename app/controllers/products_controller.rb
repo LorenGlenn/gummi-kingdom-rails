@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-
+    @product = Product.find(params[:id])
+    render :show
   end
 
   def new
@@ -13,7 +14,9 @@ class ProductsController < ApplicationController
   end
 
   def create
-
+    @product = Product.create(product_params)
+    @products = Product.all
+    render :index
   end
 
   def edit
