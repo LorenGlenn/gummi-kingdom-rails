@@ -1,9 +1,11 @@
-<h1>Details for <%= @product.name %></h1>
+<div class="panel panel-primary">
+  <div class="panel-heading"><h1>Details for <%= @product.name %></h1></div>
+  <div class="panel-body">
+    <%= image_tag @product.image, :class => "product-images" %> <br>
+    <h3>Price:</h3> <h4>$<%= @product.cost %></h4> <br>
+    <h3>Country of Origin:</h3> <h4><%= @product.country %></h4> <br>
 
-Name: <%= @product.name %>
-Cost: <%= @product.cost %>
-Country: <%= @product.country %>
-Image: <%= @product.image %>
-
-<%= link_to "Edit", edit_product_path(@product) %>
-<%= link_to "Delete", product_path(@product),:data => {:confirm => "Are you sure?",:method => "delete"} %>
+    <%= link_to "Edit", edit_product_path(@product) %> |
+    <%= link_to "Delete", product_path(@product),:data => {:confirm => "Are you sure?",:method => "delete"} %>
+  </div>
+</div>

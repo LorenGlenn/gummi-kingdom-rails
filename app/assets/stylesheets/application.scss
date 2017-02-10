@@ -1,2 +1,33 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  text-align: center;
+}
+
+.col-md-3 {
+  border: 1px solid black;
+  margin: 40px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.col-md-3 img{
+  height: 200px;
+  width: 200px;
+}
+
+.form-control {
+  width: 500px;
+  margin: 15px auto;
+}
+
+.product-images {
+  height: 200px;
+  width: 200px;
+}
+
+h3, h4{
+  display: inline;
+  padding-bottom: 15px;
+}

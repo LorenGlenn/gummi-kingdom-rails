@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GummiKingdom</title>
+    <title>Gummi-Kingdom</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,10 +9,17 @@
   </head>
 
   <body>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
-    <%= yield %>
+    <nav class="navbar navbar-default">
+      <%= image_tag "logo.jpg", :class => 'navbar-brand', :id => 'brand'%>
+      <%= link_to "All Products", products_path, :class => 'navbar-brand' %>
+      <%= link_to "New Product", new_product_path, :class => 'navbar-brand' %>
 
-    <%= link_to "Home", products_path %>
+    </nav>
+    <div class="container">
+
+      <%= flash[:alert] %>
+      <%= flash[:notice] %>
+      <%= yield %>
+  </div>
   </body>
 </html>
