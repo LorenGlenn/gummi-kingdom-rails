@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
     <%= yield %>
 
     <%= link_to "Home", products_path %>

@@ -6,7 +6,6 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
-    render :show
   end
 
   def new
@@ -20,11 +19,19 @@ class ProductsController < ApplicationController
   end
 
   def edit
-
+    @product = Product.find(params[:id])
   end
 
   def update
-
+    @products = Product.all
+    @product = Product.find(params[:id])
+    if @product.update(product_params)
+      flash[:notice] = "Product Updated!"
+      render :index
+    else
+      flash[:alert] = "Product Update Failed!"
+      render :index
+    end
   end
 
   def destroy
