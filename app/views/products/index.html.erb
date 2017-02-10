@@ -1,0 +1,13 @@
+<h1>Gummi-Kingdom!</h1>
+
+<% if @products.any? %>
+  <% @products.each do |p| %>
+    <ul>
+      <li><%= product.name %></li>
+    </ul>
+    <% end %>
+<% else %>
+  <p>
+    There are no products yet! Click <%= link_to "here", new_product_path %> to add one!
+  </p>
+  <% end %>
