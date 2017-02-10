@@ -6,3 +6,4 @@ Country: <%= @product.country %>
 Image: <%= @product.image %>
 
 <%= link_to "Edit", edit_product_path(@product) %>
+<%= link_to "Delete", product_path(@product),:data => {:confirm => "Are you sure?",:method => "delete"} %>
